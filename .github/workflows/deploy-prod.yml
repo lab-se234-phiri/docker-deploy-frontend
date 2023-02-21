@@ -37,6 +37,6 @@ jobs:
               mkdir 234-deploylab-frontend-2 
               cp docker-compose-prod.yml 234-deploylab-frontend-2/docker-compose-prod.yml 
               cd 234-deploylab-frontend-2 
-              docker-compose -H ${{ secrets.HOST_SERVER }} -f docker-compose-prod.yml down 
-              docker-compose -H ${{ secrets.HOST_SERVER }} -f docker-compose-prod.yml pull
+              docker-compose -H ${{ secrets.HOST_SERVER }} down 
+              docker-compose -H ${{ secrets.HOST_SERVER }} pull
               docker-compose -H ${{ secrets.HOST_SERVER }} -f docker-compose-prod.yml up -d
